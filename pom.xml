@@ -15,16 +15,14 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-<servers>
-    <server>
-      <id>nexus-snapshots</id>
-      <username>admin</username>
-      <password>admin123</password>
-    </server>
-    <server>
-      <id>nexus-releases</id>
-      <username>admin</username>
-      <password>admin123</password>
-    </server>
-  </servers>
+<distributionManagement>
+    <snapshotRepository>
+      <id>snapshotrepo</id>
+      <url>http://localhost:8081/nexus/content/repositories/snapshotrepo/</url>
+    </snapshotRepository>
+    <repository>
+      <id>releaserepo</id>
+      <url>http://localhost:8081/nexus/content/repositories/releaserepo/</url>
+    </repository>
+  </distributionManagement>
 </project>
